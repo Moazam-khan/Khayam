@@ -58,7 +58,7 @@ const Leftside = () => {
               <FaLinkedinIn className="text-5xl text-gray-800 hover:text-blue-600" />
             </a>
             <a
-              href="https://github.com/Moazam-khan"
+              href="https://github.com/MuhammadKhayam322"
               target="_blank"
               rel="noopener noreferrer"
               className="transition-transform transform hover:scale-110"

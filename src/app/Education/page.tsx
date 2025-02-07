@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import { FaJsSquare, FaReact, FaHtml5, FaCss3Alt, FaGit, FaGithub, FaNpm, } from 'react-icons/fa';
 import { SiTailwindcss, SiNextdotjs, SiYarn, SiAntdesign } from 'react-icons/si';
 
-import Image from 'next/image';
+
 
 const EducationAndSkills: React.FC = () => {
   const [activeSection, setActiveSection] = useState<'education' | 'skills' | 'achievements'>('education');
@@ -94,7 +94,7 @@ technical and creative skills in a front-end development role to contribute to d
 
               {activeSection === 'skills' && (
                 <div>
-                  <h2 className="text-2xl font-bold mb-4 text-red-500 ">Skills</h2>
+                  <h2 className="text-2xl font-bold mb-4 text-red-500">Skills</h2>
                   <ul className="flex flex-wrap space-x-6">
                     {skillsData.map((skill, index) => (
                       <li key={index} className="flex items-center text-gray-400 text-5xl transform transition-transform duration-500 hover:scale-125 text-black">

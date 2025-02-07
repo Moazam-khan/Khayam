@@ -70,8 +70,7 @@ export const BackgroundBeamsWithCollision = ({
     <div
       ref={parentRef}
       className={cn(
-        "h-100% md:h-[40rem]  dark:from-neutral-950 dark:to-neutral-800 relative flex items-center w-full justify-center overflow-hidden",
-        // h-screen if you want bigger
+        "h-100% md:h-[40rem] dark:from-neutral-950 dark:to-neutral-800 relative flex items-center w-full justify-center overflow-hidden",
         className
       )}
     >
@@ -97,24 +96,25 @@ export const BackgroundBeamsWithCollision = ({
   );
 };
 
-const CollisionMechanism = React.forwardRef<
-  HTMLDivElement,
-  {
-    containerRef: React.RefObject<HTMLDivElement>;
-    parentRef: React.RefObject<HTMLDivElement>;
-    beamOptions?: {
-      initialX?: number;
-      translateX?: number;
-      initialY?: number;
-      translateY?: number;
-      rotate?: number;
-      className?: string;
-      duration?: number;
-      delay?: number;
-      repeatDelay?: number;
-    };
-  }
->(({ parentRef, containerRef, beamOptions = {} }, ref) => {
+const CollisionMechanism = ({
+  containerRef,
+  parentRef,
+  beamOptions = {},
+}: {
+  containerRef: React.RefObject<HTMLDivElement>;
+  parentRef: React.RefObject<HTMLDivElement>;
+  beamOptions?: {
+    initialX?: number;
+    translateX?: number;
+    initialY?: number;
+    translateY?: number;
+    rotate?: number;
+    className?: string;
+    duration?: number;
+    delay?: number;
+    repeatDelay?: number;
+  };
+}) => {
   const beamRef = useRef<HTMLDivElement>(null);
   const [collision, setCollision] = useState<{
     detected: boolean;
@@ -219,9 +219,7 @@ const CollisionMechanism = React.forwardRef<
       </AnimatePresence>
     </>
   );
-});
-
-CollisionMechanism.displayName = "CollisionMechanism";
+};
 
 const Explosion = ({ ...props }: React.HTMLProps<HTMLDivElement>) => {
   const spans = Array.from({ length: 20 }, (_, index) => ({

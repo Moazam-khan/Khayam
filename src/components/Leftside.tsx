@@ -6,7 +6,7 @@ import { FaWhatsapp, FaLinkedinIn, FaGithub } from "react-icons/fa";
 
 const Leftside = () => {
   const [text] = useTypewriter({
-    words: ["Computer Systems Engineer.", "Frontend Developer."],
+    words: ["Web Developer",  "UI/UX Designer."],
     loop: true,
     typeSpeed: 50,
     deleteSpeed: 20,
